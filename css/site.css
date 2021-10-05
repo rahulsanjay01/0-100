@@ -5,6 +5,10 @@
     --white-color: #e7e7e7;
 }
 
+.logoFont{
+    font-family: 'Press Start 2P', cursive;
+}
+
 body{
     color:var(--dark-color);
 }
