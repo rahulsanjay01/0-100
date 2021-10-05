@@ -53,8 +53,41 @@
     </nav>
      <!-- Main Section -->
      <main class="flex-shrink-0">
-         <div class="container">
-
+         <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col col-lg-4 border-end border-2">
+                    <h1>0-100: A Coding Project</h1>
+                    <h4 class="lead">
+                        This is a JavaScript project that reinforces concepts I've learned about loops. The program will display numbers 0 to 100, and the even numbers will be displayed in <strong>bold</strong>.
+                    </h4>
+                    <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                    <p>Enter a starting value and an ending value. Click on the button for the values to appear.</p>
+                </div>
+                <div class="col col-lg-8">
+                    <div>
+                        <h5>Enter Values</h5>
+                        <form class="row gy-2 gx-3">
+                            <div class="col">
+                                <input id="startValue" type="number" class="form-control" placeholder="Start Value" value="0" aria-label="Start Value">
+                            </div>
+                            <div class="col">
+                                <input id="endValue" type="number" class="form-control" placeholder="End Value" value="100" aria-label="End Value">
+                            </div>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button id="btnSubmit" type="button" class="btn btn-dark btn-md mb-5">View</button>
+                            </div>
+                        </form>
+                        <h2 class="mt-1 border-bottom border-2">Results</h2>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-sm">
+                                <tbody id="results">
+                                    <!-- results -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
          </div>
      </main>
      <!-- Footer Section -->
@@ -65,7 +98,7 @@
                     <div><span class="text-muted">&copy;2021</span> Rahul Sanjay Ahir | rahul_ahir@csu.fullerton.edu</div>
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
-                    <img src="img/White logo - no background.svg" alt="Rahul Software Engineer Logo" height=100> 
+                <img src="img/White logo - no background.svg" alt="Rahul Software Engineer Logo" height=100> 
                 </div>
                 <div class="col d-flex align-items-top justify-content-start justify-content-lg-end">
                     <div class="row">
