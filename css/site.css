@@ -5,6 +5,15 @@
     --white-color: #e7e7e7;
 }
 
+.odd{
+    font-weight: 100;
+}
+
+.even{
+    font-weight: bold;
+    font-size: large;
+}
+
 .logoFont{
     font-family: 'Press Start 2P', cursive;
 }
