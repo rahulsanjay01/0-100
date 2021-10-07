@@ -10,27 +10,33 @@ function getValues(){
         startValue = parseInt(startValue);
         endValue = parseInt(endValue);
 
-        if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-           //we need to call generateNumbers
-           let numbers = generateNumbers(startValue, endValue);
-            //we need to call displayNumbers
-            displayNumbers(numbers);
-        } else {
-            alert("You must enter integers")
-        }
+        
 
     //make sure that the start value is less than the end value
-    if (startValue > endValue) {
+        if (startValue > endValue) {
         //add a specific error message to the empty string
         alert("The starting value must be lower than the ending value")
-    }
+        
+        }
 
     //Set an upper and lower bound for the loops
     //This is an optional addition that improves the user experience
-    if (startValue > 100 || startValue < -100 || endValue > 100 || endValue < -100) {
+        if (startValue > 100 || startValue < -100 || endValue > 100 || endValue < -100) {
         //display the error message
+        
         alert("Please enter numbers that are within the range of -100 to 100")
-    }
+        return;
+        }
+        
+        if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
+            //we need to call generateNumbers
+            let numbers = generateNumbers(startValue, endValue);
+             //we need to call displayNumbers
+             displayNumbers(numbers);
+         } else {
+             alert("You must enter integers")
+             
+         }
     
 }
 
