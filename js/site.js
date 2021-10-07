@@ -1,64 +1,64 @@
-//retrieving the data from the page
-//starts or controller function
+//Retrieving the data from the page
+//Starts or controller function
 function getValues(){
-    //we need to get values from the page
+//Getting the values from the inputs by accessing the page
         let startValue = document.getElementById("startValue").value;
         let endValue = document.getElementById("endValue").value;
         
-        //we need to validate our input
-        //parse into Integer
+//Validating our input, the inputs are strings by default and we are converting the input to integers 
         startValue = parseInt(startValue);
         endValue = parseInt(endValue);
 
         
 
-    //make sure that the start value is less than the end value
+//Ensuring that the start value is less than the end value
         if (startValue > endValue) {
-        //add a specific error message to the empty string
-        alert("The starting value must be lower than the ending value")
-        
+ 
+//Notifying the user if the condtion is not met
+            alert("The starting value must be lower than the ending value")
         }
 
-    //Set an upper and lower bound for the loops
-    //This is an optional addition that improves the user experience
+//Setting the range of numbers (-100 to 100) that may be entered for the loop
         if (startValue > 100 || startValue < -100 || endValue > 100 || endValue < -100) {
-        //display the error message
         
-        alert("Please enter numbers that are within the range of -100 to 100")
-        return;
+//Display the error message if the entered numbers are not within the range of -100 to 100
+            alert("Please enter numbers that are within the range of -100 to 100")
+// Stopping the executoion of the function if the conditions are not met
+            return;
         }
         
+//Esnsuring that the users enters a start and an end value
         if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-            //we need to call generateNumbers
+//Calling generateNumbers, a for loop will utilize the start and end value as bounds
             let numbers = generateNumbers(startValue, endValue);
-             //we need to call displayNumbers
+//displayNumbers will display
              displayNumbers(numbers);
-         } else {
-             alert("You must enter integers")
-             
-         }
+        } else {
+             alert("You must enter integers")     
+        }
     
 }
 
-//generate numbers from the startValue to the endValue
-//logic function(s)
+//Generate numbers from the startValue to the endValue
 function generateNumbers(sValue, eValue){
-    
+//the numbers will go in an array
     let numbers = [];
 
-    //we want to get all numbers from start to end
+//We want to get all numbers from start to end
     for (let index = sValue; index <= eValue; index++) { 
-        //this will execute in a loop until index = eValue
+//This will execute in a loop and keep incrementing by 1 until index = eValue
         numbers.push(index);
     }
 
     return numbers;
 }
 
-//display the numbers and mark the even numbers bold
-//view or display function(s)
+//Display the numbers and mark the even numbers bold
 function displayNumbers(numbers){
-let templateRows = "";
+//This string will contain the output
+    let templateRows = "";
+
+//Identifying even and odd numbers 
     for (let index = 0; index < numbers.length; index++) {
         
         let className = "even";
@@ -71,6 +71,7 @@ let templateRows = "";
             className = "odd";    
         }
 
+//This string will display the numbers
         templateRows += `<tr><td class="${className}">${number}</td></tr>`;
         
     }
