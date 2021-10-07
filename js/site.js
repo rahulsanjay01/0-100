@@ -19,8 +19,18 @@ function getValues(){
             alert("You must enter integers")
         }
 
-    
+    //make sure that the start value is less than the end value
+    if (startValue > endValue) {
+        //add a specific error message to the empty string
+        alert("The starting value must be lower than the ending value")
+    }
 
+    //Set an upper and lower bound for the loops
+    //This is an optional addition that improves the user experience
+    if (startValue > 100 || startValue < -100 || endValue > 100 || endValue < -100) {
+        //display the error message
+        alert("Please enter numbers that are within the range of -100 to 100")
+    }
     
 }
 
