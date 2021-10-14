@@ -144,9 +144,28 @@ function displayNumbers(numbers){
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The code is structured in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+                    <h4>Description</h4>
+                    <p>The code can be broken down into three main functions</p>
+                    
+                    <h5>1.) getValues()</h5>
+                    <p>
+                        The input of the user is utilized here, and I used <strong>getElementByID</strong> to retrieve the values that serve as parameters from the page.
+                        The retrieved values are transferred to the <strong>generateNumbers()</strong> function that returns an array of values which is passed on to the <strong>displayNumbers()</strong> function.
+                    </p>
+                    <br>
+                    <h5>2.) generateNumbers()</h5>
+                    <p>
+                        I started with an empty array and named it numbers. I have used a for-loop that meets the parameters of startValue and endValue to loop through all numbers in the specified range. The for-loop iterates through each number in the numbers array. The numbers array contains numbers between the startValue and the endValue that we get from the user. Using the push function, each number is added to the array after each loop. 
+                    </p>
+                    <br>
+                    <h5>3.) displayNumbers()</h5>
+                    <p>
+                        This function serves to generate and display a string of html table rows along with the results.
+                    </p>
+                    <p>
+                        I used the variable named className to apply styling to even numbers by making them bold. The array named numbers is used again to add functionality to the for-loop. 
+                        In this for-loop, I used numbers.length, followed by an IF statement that determines if the numbers are even or odd with the help of the modulo operator. The HTML is written to the page through the variable templateRows, which increases by each iteration of the loop. 
+                    </p>
                 </div>
             </div>
          </div>
